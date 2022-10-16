@@ -121,12 +121,12 @@ particlesJS("particles-js", {
           "detect_on":"canvas",
           "events":{
             "onhover":{
-              "enable":true,
+              "enable":false,
               "mode":"bubble"
             },
             "onclick":{
               "enable":true,
-              "mode":"repulse"
+              "mode":"push"
             },
             "resize":true
         },
@@ -138,18 +138,18 @@ particlesJS("particles-js", {
             }
           },
           "bubble":{
-            "distance":150,
-            "size":20,
-            "duration":100,
+            "distance":100,
+            "size":15,
+            "duration":50,
             "opacity":3,
             "speed":2
           },
           "repulse":{
-            "distance":200,
+            "distance":100,
             "duration":0.4
           },
           "push":{
-            "particles_nb":40
+            "particles_nb":200
           },
           "remove":{
             "particles_nb":2
@@ -162,9 +162,9 @@ particlesJS("particles-js", {
 
 function animation(){
   if (window.innerWidth > 1024) {
-  gsap.from("#playButton", {delay: .5, opacity: 0, x: -550, rotation: -1440, duration: 2.2})
-  gsap.from("#pauseButton", {delay: .5, opacity: 0, x: 550, rotation: 1440, duration: 2.2})
-  gsap.from(".christmas", {delay: 2.8, opacity: 0, duration: 1.2, stagger: .6})
+    gsap.from("#playButton", {delay: .5, opacity: 0, x: -550, rotation: -1440, duration: 2.2})
+    gsap.from("#pauseButton", {delay: .5, opacity: 0, x: 550, rotation: 1440, duration: 2.2})
+    gsap.from(".christmas", {delay: 2.8, opacity: 0, duration: 1.2, stagger: .6})
   }
   else if (window.innerWidth <= 1024 && window.innerWidth > 800){
     gsap.from("#playButton", {delay: .5,  opacity: 0, x: -400, rotation: -1440, duration: 2.2})
