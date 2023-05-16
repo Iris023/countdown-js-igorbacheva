@@ -1,5 +1,6 @@
 function christmasCountdown () {
-  const christmasDate = new Date(`December 25, {new Date().getFullYear()} 00:00`);
+  const christmasDate = new Date("December 25, 2023 00:00");
+  console.log(christmasDate);
   const now = new Date();
   const diff = christmasDate - now;
 
